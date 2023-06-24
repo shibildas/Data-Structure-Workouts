@@ -17,19 +17,24 @@
  
 
 var findTheWinner = function(n, k) {
-    var arr=[]
-    var count=0
-    while (arr.length<n){
-        for(let i=1;i<=n;i++){
-            if(!arr.includes(i)){
-                count++
-                if(count===k){
-                    arr.push(i)
-                    count=0
-                }
-            }
-        }
-    }
-    return arr.pop()
+    // var arr=[]
+    // var count=0
+    // while (arr.length<n){
+    //     for(let i=1;i<=n;i++){
+    //         if(!arr.includes(i)){
+    //             count++
+    //             if(count===k){
+    //                 arr.push(i)
+    //                 count=0
+    //             }
+    //         }
+    //     }
+    // }
+    // return arr.pop()
     
+    function ejectFriend(n,k){
+        if(n===1)return 0
+        return (ejectFriend(n-1,k)+k)%(n)
+    }
+    return ejectFriend(n,k)+1
 };
