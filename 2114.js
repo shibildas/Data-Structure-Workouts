@@ -21,3 +21,7 @@ var mostWordsFound = function(sentences) {
     }
     return largest
 };
+var mostWordsFound = function(sentences) {
+    let arr=sentences.map((sentence)=>sentence.split(' ').length)
+    return Math.max(...arr)
+};
