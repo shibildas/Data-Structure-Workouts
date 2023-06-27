@@ -12,4 +12,7 @@ var kidsWithCandies = function(candies, extraCandies) {
     }
     return result
 };
- 
+var kidsWithCandies = function(candies, extraCandies) {
+    let max= Math.max(...candies)
+    return candies.map(cand=> ((cand+extraCandies)>=max))
+};
