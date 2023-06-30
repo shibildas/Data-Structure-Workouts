@@ -18,3 +18,10 @@ var finalValueAfterOperations = function(operations) {
     }
     return num    
 };
+var finalValueAfterOperations = function(operations) {
+    let num=0
+    for (let i=0;i<operations.length;i++){
+        (operations[i][1]==="-")? num--:num++
+    }
+    return num    
+};
