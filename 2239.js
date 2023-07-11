@@ -7,12 +7,18 @@
 
  
 var findClosestNumber = function(nums) {
-    let result=0
-    let neg=0-1
-    while(true){
-        if(nums.includes(result)) return result
-        if(nums.includes(result*neg)) return result*neg
-        result++
-    }
-    
+    // let result=0
+    // let neg=0-1
+    // while(true){
+    //     if(nums.includes(result)) return result
+    //     if(nums.includes(result*neg)) return result*neg
+    //     result++
+    // }
+    let result=nums.reduce((acc, num) => Math.abs(num) < Math.abs(acc)
+        ? num
+        : Math.abs(num) === Math.abs(acc)
+            ? Math.max(num, acc)
+            : acc,
+    );
+    return result
 };
