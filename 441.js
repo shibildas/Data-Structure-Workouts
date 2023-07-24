@@ -11,7 +11,7 @@ var arrangeCoins = function(n) {
     let count=0;
     let i=1
     while(n>0){
-        n=n-i
+        n=n-(count+1)
         count++
         i++
     }
