@@ -21,7 +21,6 @@
 // Return the decoded message.
 var decodeMessage = function(key:string, message:string) {
     let map={" ":" "}
-    key=key.split(' ').join('')
     let index=0
     for (let i=0;i<key.length;i++){
         if(!map[key[i]]){
