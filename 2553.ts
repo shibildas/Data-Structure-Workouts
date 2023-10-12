@@ -33,3 +33,15 @@ function separateDigits(nums: number[]): number[] {
     }
     return result
     };
+
+    function separateDigits2(nums: number[]): number[] {
+        let result:number[]=[]
+        for(let i=0;i<nums.length;i++){
+        let str= nums[i]+''
+        let arr=str.split('')
+        for(let j=0;j<arr.length;j++){
+            result.push(parseInt(arr[j]))
+        }
+        }
+        return result
+        };
